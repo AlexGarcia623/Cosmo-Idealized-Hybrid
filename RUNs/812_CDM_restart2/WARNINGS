@@ -1,0 +1,25 @@
+WARNING: Code warning on task=0, function measure_cpu_performance(), file src/mpi_utils/healthtest.c, line 143: Consider stopping: the performance variation=0.474831 of the CPUs lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.440463 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.598414 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=10, function return_evaluate(), file src/SMUGGLE/stellar_return.c, line 1072: negative thermal energy variation in AGB calculation du= -5.42101086e-20, boost 88.0655, inj_mass 4.37175e-22, inj_energy 8.83051e-18, p -0.000149597|4.32003e-05|-0.000116284,  dpv -4.08695e-19|2.01173e-18|7.46096e-18
+
+WARNING: Code warning on task=0, function measure_cpu_performance(), file src/mpi_utils/healthtest.c, line 143: Consider stopping: the performance variation=0.71611 of the CPUs lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.665493 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.575379 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.211889 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=333, function return_evaluate(), file src/SMUGGLE/stellar_return.c, line 1072: negative thermal energy variation in AGB calculation du= -6.93889390e-18, boost 1, inj_mass 4.2418e-15, inj_energy 8.72778e-12, p -0.00126443|-1.14939e-05|-0.00199908,  dpv -1.64227e-13|5.22964e-14|-2.10565e-13
+
+WARNING: Code warning on task=232, function return_evaluate(), file src/SMUGGLE/stellar_return.c, line 1072: negative thermal energy variation in AGB calculation du= -1.04083409e-17, boost 1, inj_mass 4.07287e-15, inj_energy 3.79726e-12, p -0.000709738|0.00129827|-0.00160967,  dpv -2.22176e-15|1.74712e-13|2.00579e-14
+

@@ -1,0 +1,338 @@
+5c5
+<  *
+---
+>  *  
+8,12c8,12
+<  * \author
+<  * \brief
+<  * \details
+<  *
+<  *
+---
+>  * \author     
+>  * \brief        
+>  * \details     
+>  * 
+>  * 
+14c14
+<  *
+---
+>  * 
+18,19d17
+< #include <gsl/gsl_math.h>
+< #include <math.h>
+23a22,23
+> #include <math.h>
+> #include <gsl/gsl_math.h>
+38c38
+<   mpi_printf("SIDM: Init (reading cross section files, scatter matrix file, scatter state file...)\n");
+---
+>   mpi_printf("SIDM: Init CrossSection...\n");
+50c50
+<   mpi_printf("SIDM: done.\n");
+---
+>   mpi_printf("done.\n");
+52a53
+> 
+57,61c58,60
+<   unsigned char state, in_state1, in_state2, out_state1, out_state2;
+<   unsigned char reaction;
+<   float delta_mass, initial_fraction;
+<   float sum_initial_fraction;
+<   char buf[MAXLEN_PATH], ch;
+---
+>   int state, reaction, in_state1, in_state2, out_state1, out_state2;
+>   float delta_mass;
+>   char buf[255], ch;
+64,65c63,67
+<   /* scatter matrix format (each line is a rection with individual cross section)
+<    * <state of inparticle 1><state of inparticle 2><state of outparticle 1> <state of outparticle 2> */
+---
+>   //scatter matrix format (each line is a rection with individual cross section)
+>   //<state of inparticle 1><state of inparticle 2><state of outparticle 1> <state of outparticle 2> 
+>   //
+>   //the cross section/mass for each reaction has to be tabulated in
+>   //a file called sidm_cross_reaction_<num reaction=line number in scatter file>.txt
+67,70c69
+<   /* the cross section/mass for each reaction has to be tabulated in
+<    * a file called sidm_cross_reaction_<num reaction=line number in scatter file>.txt */
+< 
+<   file_path_sprintf(buf, "scatter_matrix.txt");
+---
+>   sprintf(buf, "scatter_matrix.txt");
+74c73
+<     terminate("SIDM: scatter matrix file 'scatter_matrix.txt' not found.");
+---
+>     terminate("SIDM: scatter matrix file not found.");
+85,86c84
+<     terminate("SIDM: scatter matrix file 'scatter_matrix.txt' wrong: incorrect number of reactions  lines=%d  SIDM_REACTIONS=%d\n",
+<               lines, SIDM_REACTIONS);
+---
+>     terminate("SIDM: scatter matrix wrong: incorrect number of reactions\n");
+94c92
+<       fscanf(fpin, "%hhu %hhu %hhu %hhu", &in_state1, &in_state2, &out_state1, &out_state2);
+---
+>       fscanf(fpin, "%d %d %d %d", &in_state1, &in_state2, &out_state1, &out_state2);
+98,99c96,97
+<       SMSIDM[reaction].In1  = in_state1;
+<       SMSIDM[reaction].In2  = in_state2;
+---
+>       SMSIDM[reaction].In1 = in_state1;
+>       SMSIDM[reaction].In2 = in_state2;
+102,105c100
+<         terminate(
+<             "SIDM: scatter matrix file 'scatter_matrix.txt' wrong: incorrect states  reaction=%d  in_state1=%d  in_state2=%d  "
+<             "out_state1=%d  out_state2=%d\n",
+<             reaction, in_state1, in_state2, out_state1, out_state2);
+---
+>         terminate("SIDM: scatter matrix wrong: reaction=%d  in_state1=%d  in_state2=%d  out_state1=%d  out_state2=%d\n", reaction, in_state1, in_state2, out_state1, out_state2);
+107,108c102
+<       mpi_printf("SIDM: Scatter Matrix: reaction= %02d:   %02d  %02d -->  %02d  %02d\n", reaction, in_state1, in_state2, out_state1,
+<                  out_state2);
+---
+>       mpi_printf("SIDM: Scatter Matrix: reaction=%d:  %d %d --> %d %d\n", reaction, in_state1, in_state2, out_state1, out_state2);
+112d105
+<   /* scatter states */
+114c107,110
+<   file_path_sprintf(buf, "scatter_states.txt");
+---
+>   //scatter states
+> 
+> 
+>   sprintf(buf, "scatter_states.txt");
+118c114
+<     terminate("SIDM: scatter states file 'scatter_states.txt' not found.");
+---
+>     terminate("SIDM: scatter states file not found.");
+129c125
+<     terminate("SIDM: scatter states file 'scatter_states.txt' wrong: incorrect number of states\n");
+---
+>     terminate("SIDM: scatter states wrong: incorrect number of states\n");
+135c131
+<   for(sum_initial_fraction = 0.0, state = 0; state < SIDM_STATES; state++)
+---
+>   for(state = 0; state < SIDM_STATES; state++)
+137c133
+<       fscanf(fpin, "%g %g", &delta_mass, &initial_fraction);
+---
+>       fscanf(fpin, "%g", &delta_mass);
+139,140c135
+<       STSIDM[state].DeltaMass       = delta_mass;
+<       STSIDM[state].InitialFraction = initial_fraction;
+---
+>       STSIDM[state].DeltaMass = delta_mass;
+142,148c137,138
+<       sum_initial_fraction += initial_fraction;
+< 
+<       if(state == 0 && delta_mass != 0.0)
+<         terminate(
+<             "SIDM: scatter states file 'scatter_states.txt' wrong: ground state delta_mass = %g (expected 0.0 since the first state "
+<             "should be the ground state)\n",
+<             delta_mass);
+---
+>       if ((state == 0) && (delta_mass != 0.0))
+>        terminate("SIDM: wrong ground state delta_mass = %g (expected 0.0)\n", delta_mass);
+152,153d141
+<   if(fabs(sum_initial_fraction - 1.0) > 1e-5)
+<     terminate("SIDM: sum_initial_fraction-1.0=%g (should be 0.0)\n", sum_initial_fraction - 1.0);
+154a143,144
+> 
+> 
+156a147,149
+> 
+> 
+> 
+159c152,155
+< MyDouble sidm_cross_sigma(MyDouble rel_vel, unsigned char reaction) { return CrossUnitFac * All.CrossSectionPerMass_in_cgs; }
+---
+> MyDouble sidm_cross_sigma(MyDouble rel_vel, int reaction)
+> {
+>   return CrossUnitFac * All.CrossSectionPerMass_in_cgs;
+> }
+161c157
+< MyDouble sidm_cross_sigma(MyDouble rel_vel, unsigned char reaction)
+---
+> MyDouble sidm_cross_sigma(MyDouble rel_vel, int reaction)
+163c159
+<   int bin = (int)((log(rel_vel) - log(VelTable[0])) / Dvlog);
+---
+>   int bin = (int) ( (log(rel_vel) - log(VelTable[0])) / Dvlog );
+167c163
+<   if (rel_vel < VelTable[0])
+---
+>   if (rel_vel < VelTable[0]) 
+169c165
+<   if (rel_vel > VelTable[CrossVbins - 1])
+---
+>   if (rel_vel > VelTable[CrossVbins - 1]) 
+174c170
+<   if(rel_vel < VelTable[0])
+---
+>   if (rel_vel < VelTable[0])
+176c172
+<   if(rel_vel > VelTable[CrossVbins - 1])
+---
+>   if (rel_vel > VelTable[CrossVbins - 1])
+182a179,180
+> 
+> 
+188c186
+<   char buf[MAXLEN_PATH];
+---
+>   char buf[255];
+192c190
+<   unsigned char reaction;
+---
+>   int reaction;
+194,195c192,193
+<   /* the cross section/mass for each reaction has to be tabulated in
+<    * a file called sidm_cross_reaction_<num reaction=line number in scatter file>.txt */
+---
+>   //the cross section/mass for each reaction has to be tabulated in
+>   //  //a file called sidm_cross_reaction_<num reaction=line number in scatter file>.txt
+198c196
+<   file_path_sprintf(buf, "sidm_cross_reaction_0.txt");
+---
+>   sprintf(buf, "sidm_cross_reaction_0.txt");
+202c200
+<     terminate("SIDM: cross section file 'sidm_cross_reaction_0.txt' not found");
+---
+>     terminate("SIDM: cross section file not found");
+211c209,214
+<   fclose(fpin);
+---
+>    fclose(fpin);
+> 
+>    CrossVbins = lines;
+> 
+>    mpi_printf("SIDM: read %d lines\n", lines);
+>    fflush(stdout);
+213d215
+<   CrossVbins = lines;
+215,216d216
+<   mpi_printf("SIDM: read %d lines\n", lines);
+<   fflush(stdout);
+219,220c219,220
+<   VelTable   = (double *)mymalloc("VelTable", CrossVbins * sizeof(double *));
+<   CrossTable = (double **)mymalloc("CrossTable", SIDM_REACTIONS * sizeof(double *));
+---
+>   VelTable = (double *) mymalloc("VelTable", CrossVbins * sizeof(double *));
+>   CrossTable = (double **) mymalloc("CrossTable", SIDM_REACTIONS * sizeof(double *));
+222c222
+<     CrossTable[reaction] = (double *)mymalloc("CrossTable", CrossVbins * sizeof(double));
+---
+>     CrossTable[reaction] = (double *) mymalloc("CrossTable", CrossVbins * sizeof(double));
+224a225
+> 
+227c228
+<         file_path_sprintf(buf, "sidm_cross_reaction_%d.txt", reaction);
+---
+>         sprintf(buf, "sidm_cross_reaction_%d.txt", reaction);
+231c232,233
+<           terminate("SIDM: cross section file '%s' not found", buf);
+---
+>           terminate("SIDM: cross section file not found");
+> 
+239,240c241,242
+<             VelTable[i]             = tmp_rel_vel;              /* km/s */
+<             CrossTable[reaction][i] = tmp_cross * CrossUnitFac; /* cm^2/g */
+---
+>             VelTable[i] = tmp_rel_vel;  //km/s
+>             CrossTable[reaction][i] = tmp_cross * CrossUnitFac; //cm^2/g
+244c246,247
+<                 terminate("SIDM: cross section file '%s' wrong:  velocity bins are not monotonic", buf);
+---
+>                 terminate("SIDM: table wrong");
+> 
+256c259
+<             file_path_sprintf(buf, "%s/sidm_cross_reaction_%d.txt", All.OutputDir, reaction);
+---
+>             sprintf(buf, "%s/sidm_cross_reaction_%d.txt", All.OutputDir, reaction);
+259,260c262,263
+<               fprintf(fp, "%d %g %g %g %g %g\n", i, VelTable[i], CrossTable[reaction][i], CrossTable[reaction][i] / CrossUnitFac,
+<                       sidm_cross_sigma(VelTable[i], reaction), sidm_cross_sigma(VelTable[i], reaction) / CrossUnitFac);
+---
+>               fprintf(fp, "%d %g %g %g %g %g\n", i, VelTable[i], CrossTable[reaction][i], CrossTable[reaction][i] / CrossUnitFac, sidm_cross_sigma(VelTable[i], reaction),
+>                       sidm_cross_sigma(VelTable[i], reaction) / CrossUnitFac);
+264,265c267
+<     mpi_printf("SIDM: read cross section  -->  CrossVbins=%d   Dvlog=%g   minvel=%g   maxvel=%g\n", CrossVbins, Dvlog, VelTable[0],
+<                VelTable[CrossVbins - 1]);
+---
+>     mpi_printf("SIDM: read cross section  -->  CrossVbins=%d   Dvlog=%g   minvel=%g   maxvel=%g\n", CrossVbins, Dvlog, VelTable[0], VelTable[CrossVbins - 1]);
+269c271,272
+< double sidm_scatter_P(double phys_rho, double phys_rel_vel, double Ekin, unsigned char reaction, int *retval)
+---
+> 
+> double sidm_scatter_P(double phys_rho, double phys_rel_vel, double Ekin, int reaction, int *retval)
+273,277c276,280
+<   if(sidm_cross_sigma(phys_rel_vel, reaction) == 0.0)
+<     {
+<       *retval = -2;
+<       return 0.0;
+<     }
+---
+>   if (sidm_cross_sigma(phys_rel_vel, reaction) == 0.0)
+>    {
+>      *retval = -2;     
+>      return 0.0; 
+>    }   
+283,289c286,290
+<   if((Ekin + delta_E) >= 0)
+<     {
+<       *retval = 0;
+<       return phys_rho * sidm_cross_sigma(phys_rel_vel, reaction) * phys_rel_vel / 2.0 * 1.0 /
+<              (1.0 + STSIDM[SMSIDM[reaction].In2].DeltaMass); /* FIXME: last factor takes into account that sigma/m has to be rescaled
+<                                                                 for different particle masses */
+<     }
+---
+>   if ( (Ekin + delta_E) >= 0)
+>    {
+>      *retval = 0;
+>      return phys_rho * sidm_cross_sigma(phys_rel_vel, reaction) * phys_rel_vel / 2.0  *  1.0 / (1.0 + STSIDM[SMSIDM[reaction].In2].DeltaMass); //FIXME: last factor takes into account that sigma/m has to be rescaled for different particle masses
+>    }
+291,294c292,295
+<     {
+<       *retval = -1;
+<       return 0.0;
+<     }
+---
+>    {
+>      *retval = -1;
+>      return 0.0;
+>    }
+297,298c298,299
+< /* note: we do not divide masses by HubbleParam; those cancel out during the calculation */
+< void sidm_get_delta_energy(unsigned char reaction, double *delta_E_1, double *delta_E_2)
+---
+> 
+> void sidm_get_delta_energy(int reaction, double *delta_E_1, double *delta_E_2)
+302,305c303,304
+<   *delta_E_1 = -(STSIDM[SMSIDM[reaction].Out1].DeltaMass - STSIDM[SMSIDM[reaction].In1].DeltaMass) * All.SIDM_clight *
+<                All.SIDM_clight * All.SIDM_GroundStateMass;
+<   *delta_E_2 = -(STSIDM[SMSIDM[reaction].Out2].DeltaMass - STSIDM[SMSIDM[reaction].In2].DeltaMass) * All.SIDM_clight *
+<                All.SIDM_clight * All.SIDM_GroundStateMass;
+---
+>   *delta_E_1 = -(STSIDM[SMSIDM[reaction].Out1].DeltaMass - STSIDM[SMSIDM[reaction].In1].DeltaMass)  *  SIDM_clight * SIDM_clight * All.SIDM_GroundStateMass / All.HubbleParam;
+>   *delta_E_2 = -(STSIDM[SMSIDM[reaction].Out2].DeltaMass - STSIDM[SMSIDM[reaction].In2].DeltaMass)  *  SIDM_clight * SIDM_clight * All.SIDM_GroundStateMass / All.HubbleParam;
+308,309c307
+< /* note: we do not divide masses by HubbleParam; those cancel out during the calculation */
+< void sidm_get_delta_mass(unsigned char reaction, double in_mass1, double in_mass2, double *out_mass1, double *out_mass2)
+---
+> void sidm_get_delta_mass(int reaction, double *out_mass1, double *out_mass2)
+315,316c313,314
+<   *out_mass1 = in_mass1;
+<   *out_mass2 = in_mass2;
+---
+>   *out_mass1 = All.SIDM_GroundStateMass;
+>   *out_mass2 = All.SIDM_GroundStateMass;
+318,320c316
+<   if((*out_mass1 == 0.0) || (*out_mass2 == 0.0))
+<     terminate("SIDM: wrong masses *out_mass1=%g *out_mass2=%g  reaction=%d   All.SIDM_GroundStateMass=%g\n", *out_mass1, *out_mass2,
+<               reaction, All.SIDM_GroundStateMass);
+---
+> 
+323c319,320
+< #endif /* SIDM or not */
+---
+> 
+> #endif // SIDM or not

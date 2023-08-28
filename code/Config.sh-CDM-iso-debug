@@ -1,0 +1,78 @@
+#!/bin/bash            # this line only there to enable syntax highlighting in this file
+
+NTYPES=6                       # number of particle types
+PERIODIC
+COOLING
+UVB_SELF_SHIELDING            # gas is self-shielded from the cosmic background based on its density
+USE_SFR
+VORONOI
+REGULARIZE_MESH_CM_DRIFT
+REGULARIZE_MESH_CM_DRIFT_USE_SOUNDSPEED
+REGULARIZE_MESH_FACE_ANGLE
+TREE_BASED_TIMESTEPS     # non-local timestep criterion (take 'signal speed' into account)
+REFINEMENT_SPLIT_CELLS
+REFINEMENT_MERGE_CELLS
+#DEREFINE_ONLY_DENSE_GAS
+NODEREFINE_BACKGROUND_GRID
+SELFGRAVITY                   # switch on for self-gravity
+#GRAVITY_NOT_PERIODIC          # if gravity is not to be treated periodically
+ADAPTIVE_HYDRO_SOFTENING 
+EVALPOTENTIAL                 # computes gravitational potential
+DOUBLEPRECISION=1
+DOUBLEPRECISION_FFTW
+VORONOI_DYNAMIC_UPDATE          # keeps track of mesh connectivity, which speeds up mesh construction
+NO_MPI_IN_PLACE
+NO_ISEND_IRECV_IN_DOMAIN
+FIX_PATHSCALE_MPI_STATUS_IGNORE_BUG
+ENLARGE_DYNAMIC_RANGE_IN_TIME  # This extends the dynamic range of the integer timeline from 32 to 64 bit
+OUTPUT_PRESSURE
+HAVE_HDF5                     # needed when HDF5 I/O support is desired
+#OUTPUTCOOLRATE                # outputs cooling rate, and conduction rate if enabled
+#OUTPUT_COOLHEAT               # output actual energy loss/gain in cooling/heating routine
+#HOST_MEMORY_REPORTING         # reports after start-up the available system memory by analyzing /proc/meminfo
+GFM                                    #master switch
+GFM_STELLAR_EVOLUTION=0                #stellar evolution: 0->default, 1->no mass loss (beta value changes + MassMetallicity & MassMetals inconsistent internally with cell dynamical mass) 2->call only test routine
+GFM_SET_METALLICITY                    #set the metallicity of gas in solar metallicity units
+GFM_COOLING_METAL                      #metal line cooling
+GFM_OUTPUT_MASK=1+2+4+8+16+32+64+128   #which fields to output (see io_fields.c)
+GFM_NORMALIZED_METAL_ADVECTION         #this introduces an additional pseudo element for all untracked metals and normalizes the extrapolated abundance vectors to unity
+GFM_DISCRETE_ENRICHMENT                #allow stars to enrich nearby gas from stellar evolution only above some delta mass fraction threshold
+GFM_NO_NEGATIVE_ELEMENT_MASS_RELEASED  #do not allow that negative yields for each element consume more mass than contained in ejecta elemental composition
+#SMUGGLE_MASS_AND_METAL_RETURN_ON
+#SMUGGLE_RADIATION_PRESSURE_ON
+#SMUGGLE_PHOTOIONIZATION_ON
+#SMUGGLE_SN_ENERGY_AND_MOMENTUM_ON
+SMUGGLE_AGB_WINDS                          #returns momentum and energy to the ISM accounting OB and AGB stellar winds
+#SMUGGLE_AGB_ENERGY_AND_MOMENTUM_ON
+SMUGGLE_STELLAR_EVOLUTION
+SMUGGLE_SFR                                #turns on star formation (needs USE_SFR)
+SMUGGLE_STAR_FEEDBACK                      #turns on stellar feedback
+SMUGGLE_COMPUTE_SFR_FROM_H2                #links the SFR to the H2 gas fraction
+#SMUGGLE_OUTPUT_MOLECULAR_FRACTION          #outputs the H2 gas fraction (requires SMUGGLE_COMPUTE_SFR_FROM_H2 switched on)
+SMUGGLE_OUTPUT_VIRIAL_PARAM                #outputs the gas cell virial parameter
+SMUGGLE_RADIATION_FEEDBACK                 #inputs momentum to gas particles within stromgren radius, keep cells at 10^4 K and prevents star formation in them.
+SMUGGLE_OMEGA_WEIGHT_SN                    #feedback energy weighted by solid angle instead of volume
+SMUGGLE_MOLEC_COOLING                      #approx extra molecular cooling contribution addition based on fit to CLOUDY cooling curves
+#SMUGGLE_DUST_HEATING_COOLING               #approx extra gas-dust collisional heating cooling (Meijerink & Spaans 2005)
+SMUGGLE_COSMIC_RAY_HEATING                 #approx cosmic rate heating based on formula of Guo & Oh (2008)
+SMUGGLE_PHOTOELECTRIC_HEATING              #approx photoelectric heating based on formula of Wolfire (2003)
+SMUGGLE_SN_COOLING_RADIUS_BOOST            #returns momentum and energy to the ISM accounting for an unresolved energy conserving early ST blast wave phase
+SMUGGLE_DISCRETE_SN                        #SN feedback is done in discrete SN rather then as a continuous injection
+SMUGGLE_STOCHASTIC_HII_PHOTOIONIZATION=0   #stochastic photoionization based on ionizing photon budget (0=each time step; 1=one ionization event per star particle)
+SMUGGLE_FACE_AREA_BALANCE
+SMUGGLE_STAR_FEEDBACK_TIME_LIMITER
+SMUGGLE_VARIABLE_EFFICIENCY
+
+
+#FOF
+#FOF_PRIMARY_LINK_TYPES=2
+#FOF_SECONDARY_LINK_TYPES=1+4+8+16+32
+
+NTYPES_ICS=6
+INDIVIDUAL_GRAVITY_SOFTENING=4+8+16+32
+SMUGGLE_RADIATION_FEEDBACK_DEBUG
+MULTIPLE_NODE_SOFTENING
+RCUT=5.5
+NGB_TREE_DOUBLEPRECISION
+NSOFTTYPES=6
+OFFSET_FOR_NON_CONTIGUOUS_IDS

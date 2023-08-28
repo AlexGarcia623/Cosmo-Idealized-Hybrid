@@ -1,0 +1,36 @@
+WARNING: Code warning on task=0, function measure_cpu_performance(), file src/mpi_utils/healthtest.c, line 143: Consider stopping: the performance variation=0.28932 of the CPUs lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=1.06216 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.995638 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.163319 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function reread_params_after_loading_restart(), file src/restart.c, line 275: OutputListFlag modified while restarting at Time=0.48669
+WARNING: Code warning on task=0, function measure_cpu_performance(), file src/mpi_utils/healthtest.c, line 143: Consider stopping: the performance variation=0.421491 of the CPUs lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.624168 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.727096 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_cpu_performance(), file src/mpi_utils/healthtest.c, line 143: Consider stopping: the performance variation=0.23917 of the CPUs lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.730762 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.671217 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_cpu_performance(), file src/mpi_utils/healthtest.c, line 143: Consider stopping: the performance variation=0.267148 of the CPUs lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.538076 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.809051 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+

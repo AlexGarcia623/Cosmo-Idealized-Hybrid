@@ -1,0 +1,98 @@
+NTYPES=6                       # number of particle types
+PERIODIC
+COOLING
+UVB_SELF_SHIELDING            # gas is self-shielded from the cosmic background based on its density
+USE_SFR
+VORONOI
+REGULARIZE_MESH_CM_DRIFT
+REGULARIZE_MESH_CM_DRIFT_USE_SOUNDSPEED
+REGULARIZE_MESH_FACE_ANGLE
+TREE_BASED_TIMESTEPS     # non-local timestep criterion (take 'signal speed' into account)
+REFINEMENT_SPLIT_CELLS
+REFINEMENT_MERGE_CELLS
+REFINEMENT_HIGH_RES_GAS
+ENLARGE_DYNAMIC_RANGE_IN_TIME
+NTYPES_ICS=6
+SELFGRAVITY                   # switch on for self-gravity
+EVALPOTENTIAL                 # computes gravitational potential
+ADAPTIVE_HYDRO_SOFTENING
+OUTPUT_PRESSURE
+OUTPUTPOTENTIAL
+GFM                                    #master switch
+GFM_STELLAR_EVOLUTION=0                #stellar evolution: 0->default, 1->no mass loss (beta value changes + MassMetallicity & MassMetals inconsistent internally with cell dynamical mass) 2->call only test routine
+GFM_COOLING_METAL                      #metal line cooling
+#GFM_SET_METALLICITY                    #set the metallicity of gas in solar metallicity units
+#GFM_NO_METAL_ENRICHMENT                #disable metal production by SNII SNIa and AGB stars
+#GFM_EXACT_NUMNGB                       #use direct neighbor count instead of kernel weighted neighbor count
+GFM_STELLAR_PHOTOMETRICS               #calculate stellar magnitudes for different filters based on GALAXEV/BC03
+GFM_OUTPUT_MASK=1+2+4+8+16+32+64
+GFM_NORMALIZED_METAL_ADVECTION         #this introduces an additional pseudo element for all untracked metals and normalizes the extrapolated abundance vectors to unity
+#GFM_DISCRETE_ENRICHMENT
+
+SMUGGLE_SFR                                #turns on star formation (needs USE_SFR)
+SMUGGLE_STAR_FEEDBACK                      #turns on stellar feedback
+SMUGGLE_STAR_FEEDBACK_TIME_LIMITER         #turns on time step limiter for stellar evolution (to revise?)
+SMUGGLE_VARIABLE_EFFICIENCY
+SMUGGLE_OUTPUT_STELLAR_FEEDBACK               #outputs SNII number, feedback energy and mass released for stellar particles and log files for feedback (requires GFM_STELLAR_EVOLUTION)
+SMUGGLE_COMPUTE_SFR_FROM_H2
+SMUGGLE_OUTPUT_VIRIAL_PARAM
+SMUGGLE_RADIATION_FEEDBACK                 #inputs momentum to gas particles within stromgren radius, keep cells at 10^4 K and prevents star formation in them.
+SMUGGLE_RADIATION_FEEDBACK_DEBUG           #extra output fields for FM_RADIATION_FEEDBACK
+SMUGGLE_OMEGA_WEIGHT_SN                     #feedback energy weighted by mass instead of volume
+SMUGGLE_MOLEC_COOLING                      #approx extra molecular cooling contribution addition based on fit to GRACKLE cooling curves
+SMUGGLE_COSMIC_RAY_HEATING                 #approx extra molecular cooling contribution addition based on fit to GRACKLE cooling curves
+SMUGGLE_PHOTOELECTRIC_HEATING              #approx extra molecular cooling contribution addition based on fit to GRACKLE cooling curves
+SMUGGLE_SN_COOLING_RADIUS_BOOST            #returns momentum and energy to the ISM accounting for an unresolved energy conserving early ST blast wave phase
+SMUGGLE_DISCRETE_SN                        #SN feedback is done in discrete SN rather then as a continuous injection
+SMUGGLE_AGB_WINDS                          #returns momentum and energy to the ISM accounting OB and AGB stellar winds
+SMUGGLE_STOCHASTIC_HII_PHOTOIONIZATION=0   #Photoionization is carried out stochastically based on mass in stromgren sphere
+#SMUGGLE_SUPERBUBBLE_LIMITER                #sets feedback coupling radius according to estimates of superbubble sizes
+#SMUGGLE_FACE_AREA_BALANCE                  #balances SN feedback momentum injection in x/y/z directions 
+#SMUGGLE_STELLAR_EVOLUTION
+SMUGGLE_FACE_AREA_BALANCE
+SMUGGLE_STELLAR_EVOLUTION
+
+#CELL_CENTER_GRAVITY
+NSOFTTYPES=6
+#HIERARCHICAL_GRAVITY
+ALLOW_DIRECT_SUMMATION
+DIRECT_SUMMATION_THRESHOLD=2048
+MULTIPLE_NODE_SOFTENING
+INDIVIDUAL_GRAVITY_SOFTENING=4+8+16+32
+PMGRID=512
+RCUT=5.5
+PLACEHIGHRESREGION=2
+ENLARGEREGION=1.2
+GRIDBOOST=1
+PM_ZOOM_OPTIMIZED
+CHUNKING
+DOUBLEPRECISION=1
+DOUBLEPRECISION_FFTW
+NGB_TREE_DOUBLEPRECISION
+FOF
+FOF_PRIMARY_LINK_TYPES=2
+FOF_SECONDARY_LINK_TYPES=1+16+32
+SUBFIND
+COMBINETYPES
+PROCESS_TIMES_OF_OUTPUTLIST
+VORONOI_DYNAMIC_UPDATE
+NO_MPI_IN_PLACE
+NO_ISEND_IRECV_IN_DOMAIN
+FIX_PATHSCALE_MPI_STATUS_IGNORE_BUG
+LONGIDS
+OFFSET_FOR_NON_CONTIGUOUS_IDS
+GENERATE_GAS_IN_ICS
+SPLIT_PARTICLE_TYPE=2+4+8
+HAVE_HDF5
+#IMPOSE_PINNING
+#IMPOSE_PINNING_OVERRIDE_MODE
+#ENFORCE_JEANS_STABILITY_OF_CELLS
+
+#OUTPUT_IN_DOUBLEPRECISION                # snapshot files will be written in double precision
+INPUT_IN_DOUBLEPRECISION                 # initial conditions are in double precision
+#OUTPUT_COORDINATES_IN_DOUBLEPRECISION    # will always output coordinates in double precision
+
+OUTPUT_SOFTENINGS
+
+
+

@@ -1,0 +1,131 @@
+
+   __    ____  ____  ____  _____
+  /__\  (  _ \( ___)(  _ \(  _  )
+ /(__)\  )   / )__)  )___/ )(_)(
+(__)(__)(_)\_)(____)(__)  (_____)
+
+
+PINNING: We are not using OpenMP.
+
+
+This is Arepo, version Arepo 0.1 (git: unknown).
+
+Running with 1 MPI tasks.
+
+Apparently we're using 1 compute nodes (we have a minimum of 1 MPI tasks per node, and a maximum of 1)
+
+Code was compiled with the following compiler and flags:
+mpicc -std=c11 -O3 -g -Wall -parallel -ipo -funroll-loops -xcore-avx2 -diag-disable 3180 -DH5_USE_16_API  -I/apps/intel/2018.1.163/gsl/2.4/include  -I/apps/intel/2018.1.163/fftw/3.3.7/include        -I./build     
+
+
+Code was compiled with settings:
+
+        NTYPES=6
+        PERIODIC
+        COOLING
+        UVB_SELF_SHIELDING
+        USE_SFR
+        VORONOI
+        REGULARIZE_MESH_CM_DRIFT
+        REGULARIZE_MESH_CM_DRIFT_USE_SOUNDSPEED
+        REGULARIZE_MESH_FACE_ANGLE
+        TREE_BASED_TIMESTEPS
+        REFINEMENT_SPLIT_CELLS
+        REFINEMENT_MERGE_CELLS
+        REFINEMENT_HIGH_RES_GAS
+        ENLARGE_DYNAMIC_RANGE_IN_TIME
+        NTYPES_ICS=6
+        SELFGRAVITY
+        EVALPOTENTIAL
+        ADAPTIVE_HYDRO_SOFTENING
+        OUTPUT_PRESSURE
+        OUTPUTPOTENTIAL
+        GFM
+        GFM_STELLAR_EVOLUTION=0
+        GFM_COOLING_METAL
+        GFM_STELLAR_PHOTOMETRICS
+        GFM_OUTPUT_MASK=1+2+4+8+16+32+64
+        GFM_NORMALIZED_METAL_ADVECTION
+        SMUGGLE_SFR
+        SMUGGLE_STAR_FEEDBACK
+        SMUGGLE_STAR_FEEDBACK_TIME_LIMITER
+        SMUGGLE_VARIABLE_EFFICIENCY
+        SMUGGLE_OUTPUT_STELLAR_FEEDBACK
+        SMUGGLE_COMPUTE_SFR_FROM_H2
+        SMUGGLE_OUTPUT_VIRIAL_PARAM
+        SMUGGLE_RADIATION_FEEDBACK
+        SMUGGLE_RADIATION_FEEDBACK_DEBUG
+        SMUGGLE_OMEGA_WEIGHT_SN
+        SMUGGLE_MOLEC_COOLING
+        SMUGGLE_COSMIC_RAY_HEATING
+        SMUGGLE_PHOTOELECTRIC_HEATING
+        SMUGGLE_SN_COOLING_RADIUS_BOOST
+        SMUGGLE_DISCRETE_SN
+        SMUGGLE_AGB_WINDS
+        SMUGGLE_STOCHASTIC_HII_PHOTOIONIZATION=0
+        SMUGGLE_FACE_AREA_BALANCE
+        SMUGGLE_STELLAR_EVOLUTION
+        NSOFTTYPES=6
+        MULTIPLE_NODE_SOFTENING
+        INDIVIDUAL_GRAVITY_SOFTENING=4+8+16+32
+        PMGRID=1024
+        RCUT=5.5
+        PLACEHIGHRESREGION=2
+        ENLARGEREGION=1.2
+        GRIDBOOST=1
+        PM_ZOOM_OPTIMIZED
+        CHUNKING
+        DOUBLEPRECISION=1
+        DOUBLEPRECISION_FFTW
+        NGB_TREE_DOUBLEPRECISION
+        FOF
+        FOF_PRIMARY_LINK_TYPES=2
+        FOF_SECONDARY_LINK_TYPES=1+16+32
+        SUBFIND
+        COMBINETYPES
+        PROCESS_TIMES_OF_OUTPUTLIST
+        VORONOI_DYNAMIC_UPDATE
+        NO_MPI_IN_PLACE
+        NO_ISEND_IRECV_IN_DOMAIN
+        FIX_PATHSCALE_MPI_STATUS_IGNORE_BUG
+        LONGIDS
+        OFFSET_FOR_NON_CONTIGUOUS_IDS
+        GENERATE_GAS_IN_ICS
+        SPLIT_PARTICLE_TYPE=2+4+8
+        HAVE_HDF5
+        INPUT_IN_DOUBLEPRECISION
+        OUTPUT_SOFTENINGS
+
+
+Parameters are missing.
+Call with <ParameterFile> [<RestartFlag>] [<RestartSnapNum>] [<SpecialOptions>]
+
+   RestartFlag    Action
+       0          Read initial conditions and start simulation
+       1          Read restart files and resume simulation
+       2          Restart from specified snapshot dump and resume simulation
+       3          Run FOF and optionally SUBFIND: [<SubboxSnapNum> for SUBBOX_SNAPSHOTS]
+       4          Make an image slice:    <SnapNum> <pixelsX> <pixelsY> <axisX> <axisY> <axisZ> <xmin> <xmax> <ymin> <ymax> <zval>
+       5          Make a projected image: <SnapNum> <pixelsX> <pixelsY> <axisX> <axisY> <axisZ> <xmin> <xmax> <ymin> <ymax> <zmin> <zmax> [<SubboxSnapNum> for SUBBOX_SNAPSHOTS]
+       6          Convert snapshot file to different format [input=ICFormat  output=SnapFormat]   NOTE: derived quantities have round-off errors!
+       7          Calculate a velocity power spectrum for the gas cells
+       8          Make a grid projection: <SnapNum> <pixelsX> <pixelsY> <pixelsZ> 0 0  <xmin> <xmax> <ymin> <ymax> <zmin> <zmax>
+       9          Make a projection along an arbitrary axis: <SnapNum> <pixelsX> <pixelsY> <centerX> <centerY> <centerZ> <dirX> <dirY> <dirZ> <boxX> <boxY> <boxZ>
+      10          Make a perspective camera projection: <SnapNum> <pixelsX> <pixelsY> <filename of camera file> [<SubboxSnapNum> for SUBBOX_SNAPSHOTS]
+      11          Calculate power spectra of various quantities for TRACER_PARTICLEs
+      12          Calculate two-point correlation function: <SnapNum> <parttype bitmask> [output path]
+      13          Calculate power spectrum: <SnapNum> <parttype bitmask> [output path]
+      14          Write out the Voronoi mesh: <SnapNum>
+      15          Run the post-processing shock finder: <SnapNum> [<SubboxNum> for SUBBOX_SNAPSHOTS]
+      16          Write out a two-dimensional slice of the Voronoi mesh: <SnapNum> <center_x> <center_y> <center_z> <normal_x> <normal_y> <normal_z>
+      17          Write out snapshot dump with measured gradients
+      18          Recalculate gravitational potential values for specified snaphot dump: <snapnum>
+      19          Calculate additional quantities from a snapshot dump: <snapnum>
+      20          Render Auriga movie frame from a snapshot dump: <snapnum>
+      21          Run SimpleX RT in post-processing mode on a snapshot: <snapnum> <runTime> <numSteps>
+      22          Compute Voronoi densities for DM particles for specified snapshot dump: <snapnum>
+
+Code run for 0.002978 seconds!
+endrun called, calling MPI_Finalize()
+bye!
+

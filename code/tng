@@ -1,0 +1,154 @@
+
+   __    ____  ____  ____  _____
+  /__\  (  _ \( ___)(  _ \(  _  )
+ /(__)\  )   / )__)  )___/ )(_)(
+(__)(__)(_)\_)(____)(__)  (_____)
+
+
+PINNING: We are not using OpenMP.
+
+
+-------------------------------------------------------------------------------------------------------------------------
+AvailMem:	 Largest =   68816.56 Mb (on task=   0), Smallest =   68816.56 Mb (on task=   0), Average =   68816.56 Mb
+Total Mem:	 Largest =  128334.61 Mb (on task=   0), Smallest =  128334.61 Mb (on task=   0), Average =  128334.61 Mb
+Committed_AS:	 Largest =   59518.05 Mb (on task=   0), Smallest =   59518.05 Mb (on task=   0), Average =   59518.05 Mb
+SwapTotal:	 Largest =    8192.00 Mb (on task=   0), Smallest =    8192.00 Mb (on task=   0), Average =    8192.00 Mb
+SwapFree:	 Largest =       0.00 Mb (on task=   0), Smallest =       0.00 Mb (on task=   0), Average =       0.00 Mb
+AllocMem:	 Largest =   59518.05 Mb (on task=   0), Smallest =   59518.05 Mb (on task=   0), Average =   59518.05 Mb
+-------------------------------------------------------------------------------------------------------------------------
+Task=0 has the maximum commited memory and is host: login4.ufhpc
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is Arepo, version Arepo 0.1.
+
+Running with 1 MPI tasks.
+
+Apparently we're using 1 compute nodes (we have a minimum of 1 MPI tasks per node, and a maximum of 1)
+
+Code was compiled with settings:
+
+        NTYPES=6
+        PERIODIC
+        MHD
+        MHD_POWELL
+        MHD_POWELL_LIMIT_TIMESTEP
+        MHD_SEEDFIELD
+        COOLING
+        UVB_SELF_SHIELDING
+        USE_SFR
+        VORONOI
+        RIEMANN_HLLD
+        REGULARIZE_MESH_CM_DRIFT
+        REGULARIZE_MESH_CM_DRIFT_USE_SOUNDSPEED
+        REGULARIZE_MESH_FACE_ANGLE
+        TREE_BASED_TIMESTEPS
+        REFINEMENT_SPLIT_CELLS
+        REFINEMENT_MERGE_CELLS
+        REFINEMENT_HIGH_RES_GAS
+        SELFGRAVITY
+        ALLOW_DIRECT_SUMMATION
+        DIRECT_SUMMATION_THRESHOLD=8000
+        ENFORCE_JEANS_STABILITY_OF_CELLS_EEOS
+        ENFORCE_JEANS_STABILITY_OF_CELLS
+        EVALPOTENTIAL
+        NSOFTTYPES=6
+        MULTIPLE_NODE_SOFTENING
+        INDIVIDUAL_GRAVITY_SOFTENING=32
+        ADAPTIVE_HYDRO_SOFTENING
+        PMGRID=1024
+        RCUT=5.5
+        PLACEHIGHRESREGION=2
+        ENLARGEREGION=1.2
+        GRIDBOOST=1
+        PM_ZOOM_OPTIMIZED
+        CHUNKING
+        DOUBLEPRECISION=1
+        DOUBLEPRECISION_FFTW
+        OUTPUT_IN_DOUBLEPRECISION
+        INPUT_IN_DOUBLEPRECISION
+        OUTPUT_COORDINATES_IN_DOUBLEPRECISION
+        FOF
+        FOF_PRIMARY_LINK_TYPES=2
+        FOF_SECONDARY_LINK_TYPES=1+4+16+32
+        ADD_MAGNETIC_GROUP_PROPERTIES
+        SUBFIND
+        SAVE_HSML_IN_SNAPSHOT
+        SOFTEREQS
+        BLACK_HOLES
+        BH_THERMALFEEDBACK
+        DRAINGAS=3
+        BH_EXACT_INTEGRATION
+        BH_BONDI_DEFAULT
+        BH_DO_NOT_PREVENT_MERGERS
+        BH_USE_ALFVEN_SPEED_IN_BONDI
+        BH_NEW_CENTERING
+        BH_PRESSURE_CRITERION
+        BH_ADIOS_WIND
+        BH_ADIOS_WIND_WITH_QUASARTHRESHOLD
+        BH_ADIOS_WIND_WITH_VARIABLE_QUASARTHRESHOLD
+        BH_ADIOS_RANDOMIZED
+        BH_ADIOS_ONLY_ABOVE_MINIMUM_DENSITY
+        VORONOI_DYNAMIC_UPDATE
+        NO_MPI_IN_PLACE
+        NO_ISEND_IRECV_IN_DOMAIN
+        FIX_PATHSCALE_MPI_STATUS_IGNORE_BUG
+        ENLARGE_DYNAMIC_RANGE_IN_TIME
+        REDUCE_FLUSH
+        OUTPUT_CENTER_OF_MASS
+        OUTPUTPOTENTIAL
+        HAVE_HDF5
+        DEBUG
+        HOST_MEMORY_REPORTING
+        LONGIDS
+        GENERATE_GAS_IN_ICS
+        SPLIT_PARTICLE_TYPE=2+4
+        GFM
+        GFM_STELLAR_EVOLUTION=0
+        GFM_CONST_IMF=0
+        GFM_PREENRICH
+        GFM_WINDS
+        GFM_WINDS_VARIABLE=1
+        GFM_WINDS_VARIABLE_HUBBLE
+        GFM_WIND_ENERGY_METAL_DEPENDENCE
+        GFM_WINDS_STRIPPING
+        GFM_WINDS_THERMAL_NEWDEF
+        GFM_COOLING_METAL
+        GFM_AGN_RADIATION
+        GFM_STELLAR_PHOTOMETRICS
+        GFM_OUTPUT_MASK=1+2+4+8+16+32+64+256
+        GFM_NORMALIZED_METAL_ADVECTION
+        GFM_OUTPUT_BIRTH_POS
+        GFM_CHEMTAGS
+        GFM_DISCRETE_ENRICHMENT
+        GFM_SPLITFE
+        GFM_RPROCESS
+
+
+Parameters are missing. 
+Call with <ParameterFile> [<RestartFlag>] [<RestartSnapNum>] [<SpecialOptions>]
+
+   RestartFlag    Action
+       0          Read initial conditions and start simulation
+       1          Read restart files and resume simulation
+       2          Restart from specified snapshot dump and resume simulation
+       3          Run FOF and optionally SUBFIND: [<SubboxSnapNum> for SUBBOX_SNAPSHOTS]
+       4          Make an image slice:    <SnapNum> <pixelsX> <pixelsY> <axisX> <axisY> <axisZ> <xmin> <xmax> <ymin> <ymax> <zval>
+       5          Make a projected image: <SnapNum> <pixelsX> <pixelsY> <axisX> <axisY> <axisZ> <xmin> <xmax> <ymin> <ymax> <zmin> <zmax> [<SubboxSnapNum> for SUBBOX_SNAPSHOTS]
+       6          Convert snapshot file to different format [input=ICFormat  output=SnapFormat   NOTE: derived quantities have round-off errors!
+       7          Calculate a velocity power spectrum for the gas cells
+       8          Make a grid projection: <SnapNum> <pixelsX> <pixelsY> <pixelsZ> 0 0  <xmin> <xmax> <ymin> <ymax> <zmin> <zmax>
+       9          Make a projection along an arbitrary axis: <SnapNum> <pixelsX> <pixelsY> <centerX> <centerY> <centerZ> <dirX> <dirY> <dirZ> <boxX> <boxY> <boxZ>
+      10          Make a perspective camera projection: <SnapNum> <pixelsX> <pixelsY> <filename of camera file> [<SubboxSnapNum> for SUBBOX_SNAPSHOTS]
+      11          Calculate power spectra of various quantities for TRACER_PARTICLEs
+      12          Calculate two-point correlation function: <SnapNum> <parttype bitmask> [output path]
+      13          Calculate power spectrum: <SnapNum> <parttype bitmask> [output path]
+      14          Write out the Voronoi mesh: <SnapNum>
+      15          Run the post-processing shock finder: <SnapNum> [<SubboxNum> for SUBBOX_SNAPSHOTS]
+      16          Write out a two-dimensional slice of the Voronoi mesh: <SnapNum> <center_x> <center_y> <center_z> <normal_x> <normal_y> <normal_z>
+      17          Write out snapshot dump with measured gradients
+      18          Recalculate gravitational potential values for specified snaphot dump: <snapnum>
+
+Code run for 0.003613 seconds!
+endrun called, calling MPI_Finalize()
+bye!
+

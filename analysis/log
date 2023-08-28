@@ -1,0 +1,1158 @@
+HDF5 "../ICs/output/MW_iso_du10.dat-with-grid.hdf5" {
+GROUP "/" {
+   GROUP "Config" {
+      ATTRIBUTE "ADAPTIVE_HYDRO_SOFTENING" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "ADDBACKGROUNDGRID" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "DEBUG" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "DOUBLEPRECISION" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "DOUBLEPRECISION_FFTW" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "FIX_PATHSCALE_MPI_STATUS_IGNORE_BUG" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "HAVE_HDF5" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "HOST_MEMORY_REPORTING" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "NODEREFINE_BACKGROUND_GRID" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "NO_ISEND_IRECV_IN_DOMAIN" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "NO_MPI_IN_PLACE" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "NTYPES" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "PERIODIC" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "REFINEMENT_MERGE_CELLS" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "REFINEMENT_SPLIT_CELLS" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "REGULARIZE_MESH_CM_DRIFT" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "REGULARIZE_MESH_CM_DRIFT_USE_SOUNDSPEED" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "REGULARIZE_MESH_FACE_ANGLE" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SELFGRAVITY" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "TREE_BASED_TIMESTEPS" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "VORONOI" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "VORONOI_DYNAMIC_UPDATE" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+   }
+   GROUP "Header" {
+      ATTRIBUTE "BoxSize" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "Composition_vector_length" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "Flag_Cooling" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "Flag_DoublePrecision" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "Flag_Feedback" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "Flag_Metals" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "Flag_Sfr" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "Flag_StellarAge" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "Git_commit" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 7;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "Git_date" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 7;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "HubbleParam" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "MassTable" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SIMPLE { ( 6 ) / ( 6 ) }
+      }
+      ATTRIBUTE "NumFilesPerSnapshot" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "NumPart_ThisFile" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SIMPLE { ( 6 ) / ( 6 ) }
+      }
+      ATTRIBUTE "NumPart_Total" {
+         DATATYPE  H5T_STD_U32LE
+         DATASPACE  SIMPLE { ( 6 ) / ( 6 ) }
+      }
+      ATTRIBUTE "NumPart_Total_HighWord" {
+         DATATYPE  H5T_STD_U32LE
+         DATASPACE  SIMPLE { ( 6 ) / ( 6 ) }
+      }
+      ATTRIBUTE "Omega0" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "OmegaBaryon" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "OmegaLambda" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "Redshift" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "Time" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "UnitLength_in_cm" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "UnitMass_in_g" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "UnitVelocity_in_cm_per_s" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+   }
+   GROUP "Parameters" {
+      ATTRIBUTE "ActivePartFracForNewDomainDecomp" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "AdaptiveHydroSofteningSpacing" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "BoxSize" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "CellMaxAngleFactor" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "CellShapingSpeed" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "ComovingIntegrationOn" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "CoolingOn" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "CourantFac" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "CpuTimeBetRestartFile" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "DerefinementCriterion" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "DesNumNgb" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "ErrTolForceAcc" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "ErrTolIntAccuracy" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "ErrTolTheta" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "GasSoftFactor" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "GravityConstantInternal" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "GridSize" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "HubbleParam" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "ICFormat" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "InitCondFile" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 200;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "InitGasTemp" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "LimitUBelowCertainDensityToThisValue" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "LimitUBelowThisDensity" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "MaxMemSize" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "MaxNumNgbDeviation" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "MaxSizeTimestep" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "MeanVolume" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "MinEgySpec" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "MinGasTemp" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "MinSizeTimestep" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "MinimumComovingHydroSoftening" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "MinimumDensityOnStartUp" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "MultipleDomains" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "NumFilesPerSnapshot" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "NumFilesWrittenInParallel" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "Omega0" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "OmegaBaryon" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "OmegaLambda" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "OutputDir" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 200;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "OutputListFilename" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 200;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "OutputListOn" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "PeriodicBoundariesOn" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "ReferenceGasPartMass" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "RefinementCriterion" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "ResubmitCommand" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 200;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "ResubmitOn" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SnapFormat" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SnapshotFileBase" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 200;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningComovingType0" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningComovingType1" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningComovingType2" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningComovingType3" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningComovingType4" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningComovingType5" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningMaxPhysType0" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningMaxPhysType1" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningMaxPhysType2" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningMaxPhysType3" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningMaxPhysType4" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningMaxPhysType5" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningTypeOfPartType0" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningTypeOfPartType1" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningTypeOfPartType2" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningTypeOfPartType3" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningTypeOfPartType4" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "SofteningTypeOfPartType5" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "StarformationOn" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "TargetGasMassFactor" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "TimeBegin" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "TimeBetSnapshot" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "TimeBetStatistics" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "TimeLimitCPU" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "TimeMax" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "TimeOfFirstSnapshot" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "TopNodeFactor" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "TypeOfOpeningCriterion" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "TypeOfTimestepCriterion" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "UnitLength_in_cm" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "UnitMass_in_g" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "UnitVelocity_in_cm_per_s" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+   }
+   GROUP "PartType0" {
+      DATASET "Coordinates" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1530577, 3 ) / ( 1530577, 3 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+      DATASET "Density" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1530577 ) / ( 1530577 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+      DATASET "InternalEnergy" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1530577 ) / ( 1530577 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+      DATASET "Masses" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1530577 ) / ( 1530577 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+      DATASET "ParticleIDs" {
+         DATATYPE  H5T_STD_U32LE
+         DATASPACE  SIMPLE { ( 1530577 ) / ( 1530577 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+      DATASET "Velocities" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1530577, 3 ) / ( 1530577, 3 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+   }
+   GROUP "PartType1" {
+      DATASET "Coordinates" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 2900000, 3 ) / ( 2900000, 3 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+      DATASET "ParticleIDs" {
+         DATATYPE  H5T_STD_U32LE
+         DATASPACE  SIMPLE { ( 2900000 ) / ( 2900000 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+      DATASET "Velocities" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 2900000, 3 ) / ( 2900000, 3 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+   }
+   GROUP "PartType2" {
+      DATASET "Coordinates" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 205000, 3 ) / ( 205000, 3 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+      DATASET "ParticleIDs" {
+         DATATYPE  H5T_STD_U32LE
+         DATASPACE  SIMPLE { ( 205000 ) / ( 205000 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+      DATASET "Velocities" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 205000, 3 ) / ( 205000, 3 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+   }
+   GROUP "PartType3" {
+      DATASET "Coordinates" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 398000, 3 ) / ( 398000, 3 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+      DATASET "ParticleIDs" {
+         DATATYPE  H5T_STD_U32LE
+         DATASPACE  SIMPLE { ( 398000 ) / ( 398000 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+      DATASET "Velocities" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 398000, 3 ) / ( 398000, 3 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+   }
+   GROUP "PartType5" {
+      DATASET "Coordinates" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1, 3 ) / ( 1, 3 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+      DATASET "ParticleIDs" {
+         DATATYPE  H5T_STD_U32LE
+         DATASPACE  SIMPLE { ( 1 ) / ( 1 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+      DATASET "Velocities" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1, 3 ) / ( 1, 3 ) }
+         ATTRIBUTE "a_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "h_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "length_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mass_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "to_cgs" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "velocity_scaling" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SCALAR
+         }
+      }
+   }
+}
+}

@@ -1,0 +1,22 @@
+WARNING: Code warning on task=0, function measure_cpu_performance(), file src/mpi_utils/healthtest.c, line 143: Consider stopping: the performance variation=0.206207 of the CPUs lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.806251 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.937172 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=174, function return_evaluate(), file src/SMUGGLE/stellar_return.c, line 1072: negative thermal energy variation in AGB calculation du= -4.44089210e-16, boost 1, inj_mass 1.0574e-14, inj_energy 1.34311e-11, p -0.376638|0.0635452|-0.308632,  dpv 4.55209e-13|2.68908e-13|-6.71805e-14
+
+WARNING: Code warning on task=0, function measure_cpu_performance(), file src/mpi_utils/healthtest.c, line 143: Consider stopping: the performance variation=0.397003 of the CPUs lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.555131 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=0, function measure_hyper_cube_speed(), file src/mpi_utils/healthtest.c, line 219: 
+The performance variation=0.345534 of the communication speed lies above the prescribed tolerance MAX_VARIATION_TOLERANCE=0.1, possibly indicating a machine problem.
+
+WARNING: Code warning on task=376, function return_evaluate(), file src/SMUGGLE/stellar_return.c, line 1072: negative thermal energy variation in AGB calculation du= -5.55111512e-17, boost 1, inj_mass 7.25282e-15, inj_energy 1.91717e-12, p -0.164087|-0.11629|-0.253264,  dpv 6.33241e-14|1.36144e-13|7.25569e-14
+
+WARNING: Code warning on task=149, function return_evaluate(), file src/SMUGGLE/stellar_return.c, line 1072: negative thermal energy variation in AGB calculation du= -5.55111512e-17, boost 1, inj_mass 1.0625e-13, inj_energy 3.61121e-11, p -0.115988|-0.0840738|-0.165378,  dpv -1.60193e-12|-6.81693e-13|-2.15474e-12
+

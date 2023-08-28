@@ -1,0 +1,1 @@
+static const char *compiler_flags = "mpicc -std=c11 -O3 -g -Wall -parallel -ipo -funroll-loops -xcore-avx2 -diag-disable 3180 -DH5_USE_16_API  -I/apps/intel/2018.1.163/gsl/2.4/include  -I/apps/intel/2018.1.163/fftw/3.3.7/include        -I./build     ";
